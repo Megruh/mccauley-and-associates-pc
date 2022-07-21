@@ -15,10 +15,8 @@ export default function Services () {
                 </div>
             </div>
 
-                <h2>Services Offered by McCauley & Associates, P.C.</h2>
-            <div className="services-container">
+            <h2>Services Offered by McCauley & Associates, P.C.</h2>
             <Cards />
-            </div>
 
             <hr></hr>
 

@@ -1,5 +1,6 @@
 import React from "react"
 import Card from 'react-bootstrap/Card'
+import "../styles/cards.css"
 
 export default function Cards () {
     return (

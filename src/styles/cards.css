@@ -1,0 +1,20 @@
+.services-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 0rem;
+}
+
+.h5 {
+    color: #48615A;
+}
+
+.card {
+    margin: 2rem;
+}
+
+@media only screen and (max-width: 700px) {
+    .services-container {
+        display: block;
+    }
+}
