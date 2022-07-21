@@ -1,0 +1,29 @@
+  .header-links {
+    color: #48615A;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .header-links:hover {
+    text-decoration: underline black;
+  }
+
+  .green-company-name{
+    color: #48615A;
+    margin-left: 1rem;
+  }
+
+  .grey-company-name{
+    color: #97978E;
+  }
+  
+  .links-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 1rem;
+  }  
+  
+
+  @media only screen and (max-width: 700px) {
+
+  }

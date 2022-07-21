@@ -1,0 +1,90 @@
+.img {
+    width: 100%;
+    height: 30rem;
+    object-fit: cover;
+    margin-top: -2rem;
+}
+
+.contact-page {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.address-info-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* margin-left: 2rem; */
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+/* .info > h3 {
+    margin-bottom: 0.5rem;
+} */
+
+p {
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+}
+
+.contact-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* justify-content: flex-start; */
+    width: 30rem;
+    background-color: #97978E;
+    margin-bottom: 2rem;
+}
+
+.contact-asterisk {
+    color: white;
+    margin-top: -1rem;
+}
+
+input {
+    height: 3rem;
+    width: 25rem;
+    margin: 0.5rem;
+}
+
+.contact-message-button {
+    background-color: #48615A;
+    color: white;
+    height: 2rem;
+    width: 5rem;
+    margin-bottom: 0.5rem;
+}
+
+@media only screen and (max-width: 700px) {
+    .contact-page {
+        display: block;
+        text-align: center;
+    }
+    .address-info-container {
+        /* margin-left: 0rem; */
+        text-align: center;
+    }
+    .address-info-container > .info {
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+    }
+    .address-info-container > h3 {
+        text-align: center;
+    }
+    .contact-form-container {
+        width: 95vw;
+        margin: auto;
+    }
+    input {
+        width: 80vw;
+    }
+}
