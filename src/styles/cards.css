@@ -1,3 +1,7 @@
+* {
+    font-family: 'Noto Serif Georgian', serif;
+}
+
 .services-container {
     display: flex;
     flex-direction: row;

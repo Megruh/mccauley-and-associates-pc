@@ -1,8 +1,29 @@
-import React from "react"
+import React, { useState } from "react"
 import "../styles/contact.css"
 import {Link} from "react-router-dom"
 
 export default function Contact () {
+    const [status, setStatus] = useState("Submit");
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus("Sending...");
+    const { name, email, message } = e.target.elements;
+    let details = {
+      name: name.value,
+      email: email.value,
+      message: message.value,
+    };
+    let response = await fetch("http://localhost:5000/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json;charset=utf-8",
+      },
+      body: JSON.stringify(details),
+    });
+    setStatus("Submit");
+    let result = await response.json();
+    alert(result.status);
+  };
     return (
         <div>
             <div>
@@ -31,15 +52,21 @@ export default function Contact () {
                     </div>
                 </div>
 
-                <div className="contact-form-container">
-                    <h3>Contact Form</h3>
-                    <p className="contact-asterisk">Fields marked with an * are required</p>
-                    <input placeholder="Name*"></input>
-                    <input placeholder="Email*"></input>
-                    <input placeholder="Phone"></input>
-                    <input placeholder="Your Message*"></input>
-                    <button className="contact-message-button">Send</button>
-                </div>
+                <form className="contact-form-container" onSubmit={handleSubmit}>
+                    <div className="address-info-container">
+                        <label htmlFor="name">Name:</label>
+                        <input type="text" id="name" required />
+                    </div>
+                    <div className="address-info-container">
+                        <label htmlFor="email">Email:</label>
+                        <input type="email" id="email" required />
+                    </div>
+                    <div className="address-info-container">
+                        <label htmlFor="message">Message:</label>
+                        <textarea id="message" required />
+                    </div>
+                    <button className="contact-message-button" type="submit">{status}</button>
+                </form>
             </div>
         </div>
     )
